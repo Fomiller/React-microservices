@@ -2,14 +2,15 @@ import React, { useState, useEffect } from "react";
 
 export default function RandomCat() {
   const [randomCatImg, setRandomCatImg] = useState(null);
+  const API = ` https://api.thecatapi.com/v1/images/search`
 
   const fetchRandomCat = () => {
     setRandomCatImg("");
-    fetch(`https://aws.random.cat/meow`)
+    fetch(API)
       .then((res) => res.json())
-      .then((catInfo) => {
-        setRandomCatImg(catInfo.file);
-      });
+      .then(data => {
+        setRandomCatImg(data[0].url)
+      })
   };
 
   useEffect(() => {
