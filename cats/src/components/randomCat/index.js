@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 export default function RandomCat() {
   const [randomCatImg, setRandomCatImg] = useState(null);
-  const API = ` https://api.thecatapi.com/v1/images/search`
+  const API = ` https://api.thecatapi.com/v1/images/search?size=med`
 
   const fetchRandomCat = () => {
     setRandomCatImg("");
