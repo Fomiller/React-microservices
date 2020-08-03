@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import MicroFrontend from "./microFrontend";
+import MicroFrontend from "./components/microFrontend/microFrontend";
 
 import "./App.css";
 
